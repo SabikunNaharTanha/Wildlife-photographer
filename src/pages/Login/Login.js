@@ -1,7 +1,7 @@
-import Button from 'react-bootstrap/Button';
+import { Button } from 'react-bootstrap';
 import React, { useRef } from 'react';
 import { Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
@@ -14,6 +14,8 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
     // to keep the reference of the value in the text boxes
     const emailRef = useRef('');
     const passwordRef = useRef('');
@@ -32,7 +34,7 @@ const Login = () => {
     }
 
     if (user) {
-        navigate('/home');
+        navigate(from, { replace: true });
     }
 
     return (
@@ -59,7 +61,7 @@ const Login = () => {
                 </Button>
 
             </Form>
-            <p className='mt-3'>New to Enchantress Nature? <Link className='text-primary text-decoration-none' onClick={navigateRegister}> Please Register</Link> </p>
+            <p className='mt-3'>New to Enchantress Nature? <Link to='/register' className='text-primary text-decoration-none' onClick={navigateRegister}> Please Register</Link> </p>
         </div>
     );
 };

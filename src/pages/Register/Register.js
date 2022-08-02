@@ -26,7 +26,7 @@ const Register = () => {
     }
 
     const handleRegister = event => {
-        event.preventRegister();
+        event.preventDefault();
         const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
@@ -35,14 +35,15 @@ const Register = () => {
     }
     return (
         <div className='container w-50 mx-auto'>
-            <h2 className='text-center m-4 text-primary'>Please Login</h2>
+            <h2 className='text-center m-4 text-primary'>Please Register</h2>
             <Form onSubmit={handleRegister}>
                 <Form.Group className="mb-3" >
-                    <Form.Control type="text" name='name' placeholder="Enter Your Name" required />
+                    <Form.Control type="text" name="name" placeholder="Enter Your Name" required />
+
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Control type="email" placeholder="Enter email" required />
+                    <Form.Control type="email" name='email' placeholder="Enter email" required />
                     <Form.Text className="text-muted">
                         We'll never share your email with anyone else.
                     </Form.Text>
@@ -50,17 +51,17 @@ const Register = () => {
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
 
-                    <Form.Control type="password" placeholder="Password" required />
+                    <Form.Control type="password" name='password' placeholder="Password" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
-                <Button variant="primary" type="submit" >
+                <Button variant="primary" type="submit" value="Register" >
                     Register
                 </Button>
 
             </Form>
-            <p className='mt-3'>Already Registered? <Link className='text-primary text-decoration-none' onClick={navigateLogin}> Please Login</Link> </p>
+            <p className='mt-3'>Already Registered? <Link to='/login' className='text-primary text-decoration-none' onClick={navigateLogin}> Please Login</Link> </p>
         </div>
     );
 };
