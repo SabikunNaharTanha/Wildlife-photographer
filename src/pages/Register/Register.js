@@ -13,13 +13,16 @@ const Register = () => {
 
     const handleRegister = event => {
         event.preventRegister();
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
     }
     return (
         <div className='container w-50 mx-auto'>
             <h2 className='text-center m-4 text-primary'>Please Login</h2>
             <Form onSubmit={handleRegister}>
                 <Form.Group className="mb-3" >
-                    <Form.Control type="email" name='name' placeholder="Enter Your Name" required />
+                    <Form.Control type="text" name='name' placeholder="Enter Your Name" required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">

@@ -6,12 +6,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCIbI_bi-68HrWcvn2ugkwrqVGhDwIQM60",
-    authDomain: "wildlife-photographer.firebaseapp.com",
-    projectId: "wildlife-photographer",
-    storageBucket: "wildlife-photographer.appspot.com",
-    messagingSenderId: "377616024069",
-    appId: "1:377616024069:web:7e942c4a1e80023310926c"
+    apiKey: process.env.REACT_APP_apiKey,
+    authDomain: process.env.REACT_APP_authDomain,
+    projectId: process.env.REACT_APP_projectId,
+    storageBucket: process.env.REACT_APP_storageBucket,
+    messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    appId: process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase
