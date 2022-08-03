@@ -5,6 +5,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import SocialLogin from './SocialLogin/SocialLogin';
 
 const Login = () => {
     // To sign in with email and password
@@ -62,6 +63,7 @@ const Login = () => {
 
             </Form>
             <p className='mt-3'>New to Enchantress Nature? <Link to='/register' className='text-primary text-decoration-none' onClick={navigateRegister}> Please Register</Link> </p>
+            <SocialLogin></SocialLogin>
         </div>
     );
 };

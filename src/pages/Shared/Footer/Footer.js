@@ -1,12 +1,15 @@
 import React from 'react';
+import { Card } from 'react-bootstrap';
+import './Footer.css'
 
 const Footer = () => {
     const today = new Date();
     const year = today.getFullYear();
     return (
-        <div>
-            <p className='p-4 mt-5 bg-dark text-white text-center'>Copyright @ {year}</p>
+        <div className='mt-5 w-100 bg-secondary p-4 text-center'>
+            <Card.Footer className="text-white">Copyright @ {year}</Card.Footer>
         </div>
+
     );
 };
 
