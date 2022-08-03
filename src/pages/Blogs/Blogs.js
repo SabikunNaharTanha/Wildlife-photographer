@@ -4,7 +4,7 @@ import { Accordion, Table } from 'react-bootstrap';
 const Blogs = () => {
     return (
         <div>
-            <h2 className='m-3 text-primary text-center'>Firebase Blogs</h2>
+            <h2 className='m-3 text-secondary text-center'>Firebase Blogs</h2>
             {/* Question 01 */}
             <div className='w-75 mx-auto'>
                 <h5 className='mt-5'> Q-1. Difference Between Authorization and Authentication </h5>
