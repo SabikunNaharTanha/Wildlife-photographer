@@ -1,3 +1,15 @@
+# Website Name: Enchantress Nature
+Live Link (Firebase) : https://wildlife-photographer.web.app/
+
+Project Functionalities / features:
+* This website has a theme of a wildlife photographer that contains Home page (services, reviews), footer, header, blogs, about, Login/Signout section.
+* One private route directs the user to the checkout pagee only when logged in
+* Authentication system build using Firebase.
+* Login /Registration authentication can be performed using Google, Gitub or Email/Password.
+* Library: React used. CSS Framework: React Bootstrap has been used. Also, vanila CSS used.
+* The project is hosted by using firebase hosting.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
